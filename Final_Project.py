@@ -224,7 +224,7 @@ def create_plot(ingredients_list_cleaned, input_ingredients_digit):
 
 if __name__ == "__main__":
     #SQL
-    SQLdatabase = "C:\\Users\\chiti\\Final_Project\\Recipes3.sqlite"
+    SQLdatabase = "Recipes.sqlite"
     if os.path.exists(SQLdatabase) == False:
         print(f"Loading a new database. This may take a while...\n")
         conn = sqlite3.connect(SQLdatabase)
