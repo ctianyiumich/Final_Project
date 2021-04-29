@@ -1,1 +1,5 @@
-# Final_Project
+# Final Project - Interaction
+* The program is designed to present the most commonly used ingredients of various recipes, food types, or cuisines.
+* The User will first choose to check the popular ingredients by the recipe titles, features(cooking styles, cuisines, etc.), or both. Pressing "4" also allows the user to exit the program. Any other kinds of inputs should be responded with an "Error: Invalid input".
+* No matter how the user chooses, except for exiting or entering in invalid strings, the program will always ask how many ingredients the user would like to see in the chart. Here, the user is expected to enter a numerical number. English numbers, such as 'one', 'two', and 'ten', are regarded as invalid inputs.
+* Unless the user's input is not found within our database, a bar chart should be shown in the web browser. Names of ingredients are on the horizontal axis while the corresponding frequencies are on the vertical axis.
