@@ -224,10 +224,11 @@ def create_plot(ingredients_list_cleaned, input_ingredients_digit):
 
 if __name__ == "__main__":
     #SQL
-    SQLdatabase = "Recipes.sqlite"
-    conn = sqlite3.connect(SQLdatabase)
-    cur = conn.cursor()
-    if not os.path.exists(SQLdatabase):
+    SQLdatabase = "C:\\Users\\chiti\\Final_Project\\Recipes3.sqlite"
+    if os.path.exists(SQLdatabase) == False:
+        print(f"Loading a new database. This may take a while...\n")
+        conn = sqlite3.connect(SQLdatabase)
+        cur = conn.cursor()
         drop_recipes = '''
             DROP TABLE IF EXISTS "recipes"
         '''
@@ -270,6 +271,8 @@ if __name__ == "__main__":
                 ingredients_list = []
                 ingredients_list_cleaned = []
                 #Fetch data
+                conn = sqlite3.connect(SQLdatabase)
+                cur = conn.cursor()
                 cur.execute(
                     f'SELECT ingredients FROM recipes WHERE title Like "%{input_title_str.lower()}%"'
                 )
